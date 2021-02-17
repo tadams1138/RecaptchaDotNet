@@ -1,0 +1,14 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Thomas Adams</Authors>
+        <Copyright>Copyright 2021 © Thomas Adams. All rights reserved.</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/tadams1138/RecaptchaDotNet</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageIconUrl>https://github.com/tadams1138/RecaptchaDotNet/raw/main/icon-128x128.png</PackageIconUrl>
+        <PackageIcon>icon-128x128.png</PackageIcon>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\..\icon-128x128.png" Pack="true" PackagePath=""/>
+    </ItemGroup>
+</Project>

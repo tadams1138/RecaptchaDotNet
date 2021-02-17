@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E82B9850-87B1-455F-92A2-2F5B6BDC1209}"
+ProjectSection(SolutionItems) = preProject
+	src\Directory.Build.props = src\Directory.Build.props
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C21053B5-D31F-40CD-A48D-178949017D97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecaptchaDotNet.Proxy", "src\RecaptchaDotNet.Proxy\RecaptchaDotNet.Proxy.csproj", "{5CD4D0E6-735A-4E27-8742-0B6D56FA487F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecaptchaDotNet.Proxy.Tests.Integration", "test\RecaptchaDotNet.Proxy.Tests.Integration\RecaptchaDotNet.Proxy.Tests.Integration.csproj", "{FD840AC1-5BB2-414D-A9D4-6D9B74B8FBFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{D69EC7A9-D0C0-4AA1-B20A-1700AF9E2ABE}"
+ProjectSection(SolutionItems) = preProject
+	.gitignore = .gitignore
+	LICENSE = LICENSE
+	README.md = README.md
+	secrets.json = secrets.json
+	icon-128x128.png = icon-128x128.png
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{2FBE324D-E6B9-425B-AFF5-5EAB76C73BF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{E1E38A7B-BEE5-4854-B14E-0305C51551CC}"
+ProjectSection(SolutionItems) = preProject
+	.github\workflows\continuous-integration-workflow.yml = .github\workflows\continuous-integration-workflow.yml
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CD4D0E6-735A-4E27-8742-0B6D56FA487F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD4D0E6-735A-4E27-8742-0B6D56FA487F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD4D0E6-735A-4E27-8742-0B6D56FA487F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD4D0E6-735A-4E27-8742-0B6D56FA487F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD840AC1-5BB2-414D-A9D4-6D9B74B8FBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD840AC1-5BB2-414D-A9D4-6D9B74B8FBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD840AC1-5BB2-414D-A9D4-6D9B74B8FBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD840AC1-5BB2-414D-A9D4-6D9B74B8FBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CD4D0E6-735A-4E27-8742-0B6D56FA487F} = {E82B9850-87B1-455F-92A2-2F5B6BDC1209}
+		{FD840AC1-5BB2-414D-A9D4-6D9B74B8FBFC} = {C21053B5-D31F-40CD-A48D-178949017D97}
+		{E1E38A7B-BEE5-4854-B14E-0305C51551CC} = {2FBE324D-E6B9-425B-AFF5-5EAB76C73BF1}
+	EndGlobalSection
+EndGlobal
