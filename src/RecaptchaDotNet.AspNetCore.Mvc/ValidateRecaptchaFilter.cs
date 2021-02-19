@@ -19,7 +19,14 @@ namespace RecaptchaDotNet.AspNetCore.Mvc
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            throw new InvalidOperationException();
+            var gRecaptchaResponse = context.HttpContext.Request.Form[FormKey];
+            var verificationResponse = await _siteVerifier.VerifyAsync(gRecaptchaResponse);
+            if (!verificationResponse.Success || verificationResponse.HostName != _options.HostName)
+            {
+                context.ModelState.AddModelError(FormKey, _options.ErrorMessage);
+            }
+
+            await next();
         }
     }
 }
