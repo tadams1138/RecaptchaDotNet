@@ -23,13 +23,16 @@ jobs:
         with:
           PROJECT_FILE_PATH: src/RecaptchaDotNet.Abstractions/RecaptchaDotNet.Abstractions.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          TAG_COMMIT: false
       - name: Publish RecaptchaDotNet.Proxy
         uses: brandedoutcast/publish-nuget@v2.5.2
         with:
           PROJECT_FILE_PATH: src/RecaptchaDotNet.Proxy/RecaptchaDotNet.Proxy.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          TAG_COMMIT: false
       - name: Publish RecaptchaDotNet.AspNetCore.Mvc
         uses: brandedoutcast/publish-nuget@v2.5.2
         with:
           PROJECT_FILE_PATH: src/RecaptchaDotNet.AspNetCore.Mvc/RecaptchaDotNet.AspNetCore.Mvc.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          TAG_COMMIT: false
