@@ -1,14 +1,13 @@
-name: Publish Packages
+name: Continuous Integration
 
 on:
   push:
-    tags: 
-      - v[0-9]+.[0-9]+.[0-9]+  
+    branches:
+      - '**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -19,8 +18,5 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
-      - name: Publish RecaptchaDotNet.Proxy
-        uses: brandedoutcast/publish-nuget@v2.5.2
-        with:
-          PROJECT_FILE_PATH: src/RecaptchaDotNet.Proxy/RecaptchaDotNet.Proxy.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Test
+        run: dotnet test test/RecaptchaDotNet.AspNetCore.Mvc.Tests.Unit/RecaptchaDotNet.AspNetCore.Mvc.Tests.Unit.csproj --no-restore --verbosity normal

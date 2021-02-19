@@ -1,11 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
+
     <PropertyGroup>
         <IsPackable>true</IsPackable>
-        <Description>reCAPTCHA Proxy library</Description>
+        <Description>reCAPTCHA MVC library</Description>
         <Version>1.0.0</Version>
         <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    </ItemGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\RecaptchaDotNet.Abstractions\RecaptchaDotNet.Abstractions.csproj" />
     </ItemGroup>
+
 </Project>
